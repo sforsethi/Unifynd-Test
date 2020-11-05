@@ -14,3 +14,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     
 }
+
+protocol SecondNestedCellDelegate:class {
+    func cellTapped(title: String, subtitle: String)
+}

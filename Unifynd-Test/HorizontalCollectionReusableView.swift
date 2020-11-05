@@ -10,6 +10,7 @@ import UIKit
 class HorizontalCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var collectionView: UICollectionView!
     var secondData = [AddOnModelElement]()
+    weak var delegate: SecondNestedCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +35,15 @@ extension HorizontalCollectionReusableView: UICollectionViewDelegate, UICollecti
 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("TAPPPED!")
+        if delegate != nil {
+            delegate?.cellTapped(title: secondData[indexPath.row].title, subtitle: secondData[indexPath.row].subtitle)
+        }   else    {
+            print("Error Delegate stuff!")
+        }
+     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.frame.height, height: self.collectionView.frame.height)

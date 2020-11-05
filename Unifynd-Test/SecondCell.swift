@@ -9,6 +9,8 @@ import UIKit
 
 class SecondCell: UICollectionViewCell {
     
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
 }

@@ -27,7 +27,6 @@ class ThirdViewController: UIViewController {
                 self.view2.isHidden = false
                 var stringArray = self.numbers.map { String($0) }
                
-
                 self.allNumsLabel.text = stringArray.joined(separator: "\n")
                 if self.numbers.count > 1   {
                     let number = self.secondLargest(nums: self.numbers)
