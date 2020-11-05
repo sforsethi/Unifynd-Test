@@ -27,6 +27,8 @@
 		D7A4A29D25545F4400E69172 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A4A29C25545F4400E69172 /* Data.json */; };
 		D7A4A2A22554601A00E69172 /* FirstModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4A2A12554601A00E69172 /* FirstModel.swift */; };
 		D7A4A2BA25547C4D00E69172 /* SecondData.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A4A2B925547C4D00E69172 /* SecondData.json */; };
+		D7A4A2C525548C2E00E69172 /* QoutesData.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A4A2C425548C2E00E69172 /* QoutesData.json */; };
+		D7A4A2CA25548D7400E69172 /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4A2C925548D7400E69172 /* SecondModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		D7A4A29C25545F4400E69172 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		D7A4A2A12554601A00E69172 /* FirstModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstModel.swift; sourceTree = "<group>"; };
 		D7A4A2B925547C4D00E69172 /* SecondData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SecondData.json; sourceTree = "<group>"; };
+		D7A4A2C425548C2E00E69172 /* QoutesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QoutesData.json; sourceTree = "<group>"; };
+		D7A4A2C925548D7400E69172 /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				D70497AE25529F4D00B016B2 /* ViewController.swift */,
 				D70497B025529F4D00B016B2 /* Main.storyboard */,
 				D7A4A2B925547C4D00E69172 /* SecondData.json */,
+				D7A4A2C425548C2E00E69172 /* QoutesData.json */,
+				D7A4A2C925548D7400E69172 /* SecondModel.swift */,
 				D7A4A29C25545F4400E69172 /* Data.json */,
 				D7A4A2A12554601A00E69172 /* FirstModel.swift */,
 				D73E439F2554420800FB7167 /* FinalViewController.swift */,
@@ -285,6 +291,7 @@
 			files = (
 				D70497B725529F5100B016B2 /* LaunchScreen.storyboard in Resources */,
 				D70497B425529F5100B016B2 /* Assets.xcassets in Resources */,
+				D7A4A2C525548C2E00E69172 /* QoutesData.json in Resources */,
 				D70497B225529F4D00B016B2 /* Main.storyboard in Resources */,
 				D7A4A29D25545F4400E69172 /* Data.json in Resources */,
 				D7A4A2BA25547C4D00E69172 /* SecondData.json in Resources */,
@@ -323,6 +330,7 @@
 				D73E43B62554460200FB7167 /* FirstNestedCollectionViewCell.swift in Sources */,
 				D73E439125542A8300FB7167 /* HorizontalCollectionReusableView.swift in Sources */,
 				D73E438725532EF200FB7167 /* ThirdViewController.swift in Sources */,
+				D7A4A2CA25548D7400E69172 /* SecondModel.swift in Sources */,
 				D70497DE2552AC0000B016B2 /* FirstViewController.swift in Sources */,
 				D7A4A2A22554601A00E69172 /* FirstModel.swift in Sources */,
 			);

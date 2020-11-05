@@ -9,12 +9,15 @@ import UIKit
 
 class SecondViewController: UIViewController,SecondNestedCellDelegate {
 
+    
+    var qoutesData = QoutesModel()
     var delegate: SecondNestedCellDelegate?
     var secondData = [AddOnModelElement]()
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.secondData = readLocalFile(forName: "SecondData")!
+        self.secondData = readSecondFile(forName: "SecondData")!
+        self.qoutesData = readQoutesFile(forName: "QoutesData")!
         
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -32,7 +35,7 @@ class SecondViewController: UIViewController,SecondNestedCellDelegate {
         self.present(navController, animated:true, completion: nil)
     }
     
-    private func readLocalFile(forName name: String) -> [AddOnModelElement]? {
+    private func readSecondFile(forName name: String) -> [AddOnModelElement]? {
         do {
             if let bundlePath = Bundle.main.path(forResource: name,
                                                  ofType: "json"),
@@ -52,16 +55,38 @@ class SecondViewController: UIViewController,SecondNestedCellDelegate {
         }
         return nil
     }
+    
+    private func readQoutesFile(forName name: String) -> QoutesModel? {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name,
+                                                 ofType: "json"),
+                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                
+                do {
+                    let decodedData = try JSONDecoder().decode(QoutesModel.self, from: jsonData)
+                    print("===================================")
+                    print("\(decodedData[0].title)")
+                    return decodedData
+                } catch {
+                    print("decode error")
+                }
+            }
+        } catch {
+            print(error)
+        }
+        return nil
+    }
 
 }
 
 extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout    {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.qoutesData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SecondCell", for: indexPath) as! SecondCell
+        cell.titleLabel.text = self.qoutesData[indexPath.row].title
         cell.bgView.layer.cornerRadius = 10
         
         return cell
