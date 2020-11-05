@@ -9,7 +9,7 @@ import UIKit
 
 class HorizontalCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var titleLabel: UILabel!
+    var secondData = [AddOnModelElement]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,13 +22,16 @@ class HorizontalCollectionReusableView: UICollectionReusableView {
 
 extension HorizontalCollectionReusableView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout    {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return secondData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalCollectionViewCell", for: indexPath) as! HorizontalCollectionViewCell
         cell.bgView.layer.cornerRadius = cell.bgView.frame.height/2
         cell.bgView.backgroundColor = .random()
+        cell.titleLabel.text = secondData[indexPath.row].title
+        cell.subtitleLabel.text = secondData[indexPath.row].subtitle
+
         return cell
     }
     

@@ -9,11 +9,38 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var secondData = [AddOnModelElement]()
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.secondData = readLocalFile(forName: "SecondData")!
+        
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
     }
+    
+    private func readLocalFile(forName name: String) -> [AddOnModelElement]? {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name,
+                                                 ofType: "json"),
+                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                
+                do {
+                    let decodedData = try JSONDecoder().decode([AddOnModelElement].self, from: jsonData)
+                    print("===================================")
+                    print(decodedData[0].title)
+                    return decodedData
+                } catch {
+                    print("decode error")
+                }
+            }
+        } catch {
+            print(error)
+        }
+        return nil
+    }
+
 }
 
 extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout    {
@@ -37,6 +64,7 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HorizontalCollectionReusableView", for: indexPath) as? HorizontalCollectionReusableView {
+                headerView.secondData = self.secondData
                 return headerView
             }
         default:
