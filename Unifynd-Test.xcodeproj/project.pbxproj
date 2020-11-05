@@ -19,6 +19,9 @@
 		D70497E42552AC6300B016B2 /* FirstTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70497E32552AC6300B016B2 /* FirstTableCell.swift */; };
 		D73E438725532EF200FB7167 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E438625532EF200FB7167 /* ThirdViewController.swift */; };
 		D73E438C25533C4C00FB7167 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E438B25533C4C00FB7167 /* SecondViewController.swift */; };
+		D73E439125542A8300FB7167 /* HorizontalCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E439025542A8300FB7167 /* HorizontalCollectionReusableView.swift */; };
+		D73E4396255430D300FB7167 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E4395255430D300FB7167 /* HorizontalCollectionViewCell.swift */; };
+		D73E439B25543AE400FB7167 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E439A25543AE400FB7167 /* SecondCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		D70497E32552AC6300B016B2 /* FirstTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableCell.swift; sourceTree = "<group>"; };
 		D73E438625532EF200FB7167 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		D73E438B25533C4C00FB7167 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D73E439025542A8300FB7167 /* HorizontalCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionReusableView.swift; sourceTree = "<group>"; };
+		D73E4395255430D300FB7167 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		D73E439A25543AE400FB7167 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 				D70497AC25529F4D00B016B2 /* SceneDelegate.swift */,
 				D70497AE25529F4D00B016B2 /* ViewController.swift */,
 				D70497B025529F4D00B016B2 /* Main.storyboard */,
+				D73E439A25543AE400FB7167 /* SecondCell.swift */,
+				D73E439025542A8300FB7167 /* HorizontalCollectionReusableView.swift */,
+				D73E4395255430D300FB7167 /* HorizontalCollectionViewCell.swift */,
 				D73E438B25533C4C00FB7167 /* SecondViewController.swift */,
 				D73E438625532EF200FB7167 /* ThirdViewController.swift */,
 				D70497DD2552AC0000B016B2 /* FirstViewController.swift */,
@@ -279,10 +288,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70497E42552AC6300B016B2 /* FirstTableCell.swift in Sources */,
+				D73E4396255430D300FB7167 /* HorizontalCollectionViewCell.swift in Sources */,
 				D70497AF25529F4D00B016B2 /* ViewController.swift in Sources */,
+				D73E439B25543AE400FB7167 /* SecondCell.swift in Sources */,
 				D70497AB25529F4D00B016B2 /* AppDelegate.swift in Sources */,
 				D70497AD25529F4D00B016B2 /* SceneDelegate.swift in Sources */,
 				D73E438C25533C4C00FB7167 /* SecondViewController.swift in Sources */,
+				D73E439125542A8300FB7167 /* HorizontalCollectionReusableView.swift in Sources */,
 				D73E438725532EF200FB7167 /* ThirdViewController.swift in Sources */,
 				D70497DE2552AC0000B016B2 /* FirstViewController.swift in Sources */,
 			);

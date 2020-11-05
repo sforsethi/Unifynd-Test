@@ -47,7 +47,9 @@ class ThirdViewController: UIViewController {
         self.view2.layer.cornerRadius = 10
         self.view1.isHidden = true
         self.view2.isHidden = true
-        
+        self.enterButton.layer.cornerRadius = 10
+        self.enterButton.layer.borderWidth = 1.5
+        self.enterButton.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
     
     func secondLargest(nums: [Int]) -> Int  {
